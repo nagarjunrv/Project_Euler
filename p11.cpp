@@ -6,7 +6,7 @@
 
 using namespace std;
 
-long maxProduct(vector<vector<int>> &vec, int i, int j) {
+long maxProduct(vector<vector<int> > &vec, int i, int j) {
     long prodr = 1, prodd = 1, prodld = 1, prodrd = 1;
     for(int idx = 0; idx<4 && idx+j < vec[0].size(); ++idx) {
         prodr *= vec[i][idx+j];
@@ -24,7 +24,7 @@ long maxProduct(vector<vector<int>> &vec, int i, int j) {
 }
 
 int main() {
-    vector<vector<int>> vec;
+    vector<vector<int> > vec;
     string line;
     ifstream infile("p11.txt");
     while(getline(infile, line)) {
